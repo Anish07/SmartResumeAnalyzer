@@ -1,0 +1,94 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
+    background-color: var(--bg-color);
+    padding: 2rem;
+
+    mat-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 2.5rem;
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+        border-radius: 24px;
+        color: var(--text-color);
+
+        mat-card-header {
+            margin-bottom: 2rem;
+            justify-content: center;
+
+            mat-card-title {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--text-color);
+                letter-spacing: -0.5px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            mat-form-field {
+                width: 100%;
+            }
+
+            button {
+                padding: 0.5rem;
+                font-size: 1.1rem;
+                border-radius: 12px;
+                margin-top: 1rem;
+                background-color: var(--primary-color) !important;
+                color: #ffffff !important;
+
+                &[disabled] {
+                    background-color: rgba(0, 0, 0, 0.1) !important;
+                    color: rgba(0, 0, 0, 0.3) !important;
+                }
+            }
+        }
+
+        .error {
+            color: #ef4444;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 0.5rem;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 8px;
+        }
+
+        mat-card-footer {
+            text-align: center;
+            margin-top: 2rem;
+
+            p {
+                color: var(--text-color);
+                opacity: 0.8;
+
+                a {
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark mode overrides
+:host-context([data-theme="dark"]) {
+    button[disabled] {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: rgba(255, 255, 255, 0.3) !important;
+    }
+}

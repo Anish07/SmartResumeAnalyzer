@@ -1,0 +1,37 @@
+<div class="upload-container">
+  <mat-card class="upload-card">
+    <mat-card-header>
+      <mat-card-title>Resume Analyzer</mat-card-title>
+      <mat-card-subtitle>Upload your resume (PDF) for AI analysis</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="file-input-container">
+        <input type="file" (change)="onFileSelected($event)" accept=".pdf" #fileInput style="display: none;">
+        <button mat-raised-button color="primary" (click)="fileInput.click()">
+          Choose File
+        </button>
+        <span class="file-name" *ngIf="selectedFile">{{ selectedFile.name }}</span>
+      </div>
+
+      <div class="actions">
+        <button mat-raised-button color="accent" (click)="upload()" [disabled]="!selectedFile || isLoading">
+          {{ isLoading ? 'Analyzing...' : 'Analyze Resume' }}
+        </button>
+      </div>
+
+      <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="analysis-result" *ngIf="analysisResult">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Analysis Result</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <markdown [data]="analysisResult.analysis"></markdown>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

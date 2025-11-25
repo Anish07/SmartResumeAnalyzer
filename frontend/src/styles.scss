@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    /* Light Theme - Premium Clean */
+    --bg-color: #f8f9fc;
+    --text-color: #1a1f36;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    /* Increased opacity */
+    --navbar-bg: rgba(255, 255, 255, 0.9);
+    --navbar-text: #1a1f36;
+    --footer-bg: #1a1f36;
+    --footer-text: #ffffff;
+    --primary-color: #4f46e5;
+    /* Indigo */
+    --accent-color: #0ea5e9;
+    /* Sky Blue */
+    --glass-border: rgba(0, 0, 0, 0.1);
+    /* Darker border for light mode */
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+[data-theme="dark"] {
+    /* Dark Theme - Deep Space */
+    --bg-color: #0f172a;
+    /* Slate 900 */
+    --text-color: #f1f5f9;
+    /* Slate 100 */
+    --card-bg: rgba(30, 41, 59, 0.7);
+    /* Slate 800 with opacity */
+    --navbar-bg: rgba(15, 23, 42, 0.7);
+    --navbar-text: #f1f5f9;
+    --footer-bg: #020617;
+    /* Slate 950 */
+    --footer-text: #94a3b8;
+    /* Slate 400 */
+    --primary-color: #818cf8;
+    /* Indigo 400 */
+    --accent-color: #38bdf8;
+    /* Sky 400 */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}

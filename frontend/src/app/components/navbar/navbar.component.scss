@@ -1,0 +1,55 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--glass-shadow);
+    background-color: var(--navbar-bg) !important;
+    color: var(--navbar-text) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        a.active {
+            background: rgba(var(--primary-color), 0.1);
+            color: var(--primary-color);
+            border-radius: 8px;
+        }
+
+        // Ensure buttons are visible in dark mode
+        button[mat-button],
+        a[mat-button] {
+            color: var(--navbar-text);
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}

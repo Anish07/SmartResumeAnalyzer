@@ -1,0 +1,15 @@
+John Doe
+Software Engineer
+
+Summary
+Experienced Java Developer with 5 years of experience in Spring Boot and Microservices.
+
+Skills
+- Java, Spring Boot, SQL
+- Docker, Kubernetes
+- AWS
+
+Experience
+Senior Developer at Tech Corp
+- Built scalable APIs using Spring Boot.
+- Optimized database queries reducing latency by 40%.

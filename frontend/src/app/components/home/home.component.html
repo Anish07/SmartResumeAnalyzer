@@ -1,0 +1,66 @@
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate-hidden" #animate>
+            <h1>Unlock Your Career Potential</h1>
+            <p>AI-powered resume analysis to help you land your dream job.</p>
+            <div class="actions">
+                <a mat-raised-button color="primary" routerLink="/dashboard">Analyze Resume</a>
+                <a mat-stroked-button class="secondary-btn" routerLink="/register">Get Started</a>
+            </div>
+        </div>
+        <div class="hero-visual animate-hidden" #animate>
+            <div class="floating-card card-1">
+                <mat-icon>analytics</mat-icon>
+                <span>Smart Analysis</span>
+            </div>
+            <div class="floating-card card-2">
+                <mat-icon>check_circle</mat-icon>
+                <span>Job Fit Score</span>
+            </div>
+            <div class="floating-card card-3">
+                <mat-icon>description</mat-icon>
+                <span>Cover Letters</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="animate-hidden" #animate>Why Choose Smart Resume Analyzer?</h2>
+        <div class="features-grid">
+            <div class="feature-card animate-hidden" #animate routerLink="/about" style="cursor: pointer;">
+                <div class="icon-wrapper">
+                    <mat-icon>psychology</mat-icon>
+                </div>
+                <h3>AI-Powered Insights</h3>
+                <p>Get instant, detailed feedback on your resume's strengths and weaknesses using advanced AI models.
+                </p>
+            </div>
+
+            <div class="feature-card animate-hidden" #animate routerLink="/about" style="cursor: pointer;">
+                <div class="icon-wrapper">
+                    <mat-icon>trending_up</mat-icon>
+                </div>
+                <h3>Job Fit Scoring</h3>
+                <p>Upload a job description and see how well your resume matches the requirements.</p>
+            </div>
+
+            <div class="feature-card coming-soon animate-hidden" #animate routerLink="/about" style="cursor: pointer;">
+                <div class="badge">Coming Soon</div>
+                <div class="icon-wrapper">
+                    <mat-icon>edit_note</mat-icon>
+                </div>
+                <h3>Cover Letter Generator</h3>
+                <p>Automatically generate tailored cover letters that highlight your relevant skills for specific roles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta animate-hidden" #animate>
+        <h2>Ready to optimize your resume?</h2>
+        <a mat-raised-button color="accent" routerLink="/register">Create Free Account</a>
+    </section>
+</div>

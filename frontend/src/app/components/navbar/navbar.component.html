@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="navbar">
+    <div class="logo-container" routerLink="/">
+        <img [src]="themeService.darkMode() ? 'assets/logo-dark.png' : 'assets/logo.png'"
+            alt="Smart Resume Analyzer Logo" class="logo-img">
+        <span class="logo-text">Smart Resume Analyzer</span>
+    </div>
+    <span class="spacer"></span>
+    <div class="nav-links">
+        <button mat-icon-button (click)="toggleTheme()" aria-label="Toggle dark mode">
+            <mat-icon>{{ themeService.darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+        </button>
+
+        <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+
+        <ng-container *ngIf="isLoggedIn$ | async; else loggedOut">
+            <a mat-button routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            <button mat-button (click)="logout()">Logout</button>
+        </ng-container>
+
+        <ng-template #loggedOut>
+            <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
+            <a mat-raised-button color="accent" routerLink="/register">Get Started</a>
+        </ng-template>
+    </div>
+</mat-toolbar>

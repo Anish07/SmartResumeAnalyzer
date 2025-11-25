@@ -1,0 +1,26 @@
+<footer class="footer">
+    <div class="footer-content">
+        <div class="brand">
+            <div class="logo-container">
+                <img [src]="themeService.darkMode() ? 'assets/logo-dark.png' : 'assets/logo.png'" alt="Logo"
+                    class="footer-logo">
+                <h3>Smart Resume Analyzer</h3>
+            </div>
+            <p>Empowering your career with AI.</p>
+        </div>
+        <div class="links">
+            <a routerLink="/about">About Us</a>
+            <a routerLink="/privacy">Privacy Policy</a>
+            <a routerLink="/terms">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="socials">
+            <mat-icon>facebook</mat-icon>
+            <mat-icon>link</mat-icon> <!-- LinkedIn placeholder -->
+            <mat-icon>alternate_email</mat-icon> <!-- Twitter/X placeholder -->
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Smart Resume Analyzer. All rights reserved.
+    </div>
+</footer>
