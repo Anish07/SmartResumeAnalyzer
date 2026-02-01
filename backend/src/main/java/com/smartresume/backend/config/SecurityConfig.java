@@ -32,7 +32,20 @@ public class SecurityConfig {
                         .disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**", "/h2-console/**").permitAll()
+                        .requestMatchers(
+                                "/api/auth/**",
+                                "/h2-console/**",
+                                "/",
+                                "/index.html",
+                                "/assets/**",
+                                "/*.ico",
+                                "/*.css",
+                                "/*.js",
+                                "/*.png",
+                                "/*.jpg",
+                                "/*.svg",
+                                "/*.json")
+                        .permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
