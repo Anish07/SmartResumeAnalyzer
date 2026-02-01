@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.env.Environment;
 
 @SpringBootApplication
 public class BackendApplication {
