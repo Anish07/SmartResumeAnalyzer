@@ -26,4 +26,14 @@ public class BackendApplication {
 	public WebClient.Builder webClientBuilder() {
 		return WebClient.builder();
 	}
+
+	@Bean
+	public CommandLineRunner logConfig(Environment env) {
+		return args -> {
+			String url = env.getProperty("spring.datasource.url");
+			System.out.println("DEBUG_CONFIG: URL=" + (url != null ? url.replaceAll(":[^:@/]+@", ":*****@") : "null"));
+			String platform = env.getProperty("spring.jpa.database-platform");
+			System.out.println("DEBUG_CONFIG: Platform=" + platform);
+		};
+	}
 }
