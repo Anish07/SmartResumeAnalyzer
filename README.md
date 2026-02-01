@@ -8,7 +8,7 @@ A full-stack application that leverages Google's Gemini AI to analyze resumes, e
 -   **🤖 AI Analysis**: Uses Google Gemini 2.5 Flash Lite to summarize resumes, identify top skills, and rate job fit.
 -   **📊 Interactive Dashboard**: Visualizes analysis results with a clean, modern UI.
 -   **🔐 Secure Authentication**: User registration and login with JWT-based security.
--   **📝 Cover Letter Generation**: (Coming Soon) Generate tailored cover letters based on your resume and a job description.
+-   **📝 Cover Letter Generation**: (Coming Soon) Generate tailored cover letters based on your resume and a job description. 
 
 ## Tech Stack
 
