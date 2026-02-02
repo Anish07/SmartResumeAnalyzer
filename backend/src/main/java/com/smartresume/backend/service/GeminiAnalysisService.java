@@ -13,7 +13,7 @@ public class GeminiAnalysisService implements AiAnalysisService {
 
     private final WebClient webClient;
 
-    @Value("${gemini.model:gemini-1.5-flash}")
+    @Value("${gemini.model:gemini-2.5-flash}")
     private String model;
 
     @Value("${gemini.api.key}")
