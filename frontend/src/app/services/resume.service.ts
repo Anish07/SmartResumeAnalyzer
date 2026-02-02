@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ResumeService {
-  private apiUrl = 'http://localhost:8080/api/resume';
+  private apiUrl = '/api/resume';
 
   constructor(private http: HttpClient) { }
 
