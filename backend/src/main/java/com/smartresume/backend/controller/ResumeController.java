@@ -16,7 +16,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/resume")
 @RequiredArgsConstructor
-@CrossOrigin(allowCredentials = "true")
 public class ResumeController {
 
     private final ResumeService resumeService;
