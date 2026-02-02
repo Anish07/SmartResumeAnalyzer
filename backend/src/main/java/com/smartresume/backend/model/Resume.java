@@ -15,12 +15,10 @@ public class Resume {
     @Column(nullable = false)
     private String fileName;
 
-    @Lob
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String content; // The extracted text
 
-    @Lob
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String analysisResult; // The AI analysis JSON
 
     @ManyToOne
